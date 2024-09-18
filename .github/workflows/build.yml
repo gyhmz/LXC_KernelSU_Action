@@ -170,8 +170,10 @@ jobs:
           export KSU_EXPECTED_SIZE=${{ env.KSU_EXPECTED_SIZE }}
           export KSU_EXPECTED_HASH=${{ env.KSU_EXPECTED_HASH }}
         fi
-        sh ${{ env.KERNEL_ORIGINAL_BUILDSH }}
+        ./build_redbull-gki.sh 
 
+
+        
     - name: Check a kernel output files
       run: |
        cd $GITHUB_WORKSPACE/kernel_workspace
